@@ -5,7 +5,7 @@ import { Button } from '@/components/ui/button';
 import { useTheme } from '../hooks/useThemeHook';
 import { changeTheme } from '../lib/utils';
 
-export function ToggleTheme() {
+export const ToggleTheme = () => {
   const { theme, toggleTheme } = useTheme();
 
   useEffect(() => {
@@ -19,4 +19,4 @@ export function ToggleTheme() {
       <span className="sr-only">Toggle theme</span>
     </Button>
   );
-}
+};

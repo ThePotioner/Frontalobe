@@ -7,7 +7,7 @@ import Dashboard from './pages/Dashboard';
 import Todos from './pages/Todos';
 import NotFound from './pages/default/NotFound';
 
-function PageContainer() {
+const PageContainer = () => {
   return (
     <div className="flex flex-col flex-1">
       <Topbar />
@@ -19,6 +19,6 @@ function PageContainer() {
       </Switch>
     </div>
   );
-}
+};
 
 export default PageContainer;

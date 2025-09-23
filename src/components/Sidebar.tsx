@@ -15,7 +15,7 @@ export const items = [
   { name: 'Calendar', href: '/calendar', icon: IconCalendarWeekFilled },
 ];
 
-function Sidebar() {
+const Sidebar = () => {
   const [location] = useLocation();
   return (
     <nav className="flex flex-col min-w-[240px] max-w-[480px] bg-sidebar border">
@@ -37,6 +37,6 @@ function Sidebar() {
       </div>
     </nav>
   );
-}
+};
 
 export default Sidebar;

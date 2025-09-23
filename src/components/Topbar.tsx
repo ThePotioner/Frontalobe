@@ -2,7 +2,7 @@ import { Button } from '@/components/ui/button';
 import { items } from './Sidebar';
 import { useLocation } from 'wouter';
 
-function Topbar() {
+const Topbar = () => {
   const [location] = useLocation();
   return (
     <div className="flex bg-sidebar p-2 gap-2 border-t border-r border-b border-l-0">
@@ -12,6 +12,6 @@ function Topbar() {
       </Button>
     </div>
   );
-}
+};
 
 export default Topbar;

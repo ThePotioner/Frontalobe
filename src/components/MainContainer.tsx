@@ -2,7 +2,7 @@ import PageContainer from './PageContainer';
 import Sidebar from './Sidebar';
 import { ToggleTheme } from './ToggleTheme';
 
-function MainContainer() {
+const MainContainer = () => {
   return (
     <div className="flex h-screen">
       <Sidebar />
@@ -12,6 +12,6 @@ function MainContainer() {
       </div>
     </div>
   );
-}
+};
 
 export default MainContainer;
