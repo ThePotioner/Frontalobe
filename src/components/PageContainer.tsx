@@ -1,4 +1,4 @@
-import { Route, Switch } from 'wouter';
+import { Routes, Route } from 'react-router-dom';
 
 import Topbar from './Topbar';
 
@@ -11,12 +11,12 @@ const PageContainer = () => {
   return (
     <div className="flex flex-col flex-1">
       <Topbar />
-      <Switch>
-        <Route path="/" component={Home} />
-        <Route path="/dashboard" component={Dashboard} />
-        <Route path="/todos" component={Todos} />
-        <Route component={NotFound} />
-      </Switch>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/dashboard" element={<Dashboard />} />
+        <Route path="/todos" element={<Todos />} />
+        <Route path="*" element={<NotFound />} />
+      </Routes>
     </div>
   );
 };

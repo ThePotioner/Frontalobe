@@ -1,5 +1,5 @@
 import { Button } from '@/components/ui/button';
-import { useLocation, Link } from 'wouter';
+import { Link, useLocation } from 'react-router-dom';
 import {
   IconHome,
   IconCalendarWeekFilled,
@@ -16,7 +16,7 @@ export const items = [
 ];
 
 const Sidebar = () => {
-  const [location] = useLocation();
+  const location = useLocation();
   return (
     <nav className="flex flex-col min-w-[240px] max-w-[480px] bg-sidebar border">
       <div className="flex flex-col m-2 gap-2">
@@ -26,10 +26,10 @@ const Sidebar = () => {
             asChild
             size="sm"
             key={item.name}
-            variant={location === item.href ? 'secondary' : 'ghost'}
+            variant={location.pathname === item.href ? 'secondary' : 'ghost'}
             className="justify-start"
           >
-            <Link href={item.href}>
+            <Link to={item.href}>
               <item.icon /> {item.name}
             </Link>
           </Button>

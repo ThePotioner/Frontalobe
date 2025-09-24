@@ -5,7 +5,7 @@ import { Button } from '@/components/ui/button';
 import { useTheme } from '../hooks/useThemeHook';
 import { changeTheme } from '../lib/utils';
 
-export const ToggleTheme = () => {
+export const ThemeButton = () => {
   const { theme, toggleTheme } = useTheme();
 
   useEffect(() => {
