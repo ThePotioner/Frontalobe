@@ -1,8 +1,13 @@
+import TodoBoard from '../TodoBoard';
+import { ListedComponentWrapper } from '@/components/ui/Wrappers';
+
 const Todos = () => {
   return (
-    <div className="p-4">
-      <h1 className="text-2xl font-bold">Todos</h1>
-    </div>
+    <ListedComponentWrapper>
+      <TodoBoard name="내 할 일 목록 1" />
+      <TodoBoard name="내 할 일 목록 2" />
+      <TodoBoard name="내 할 일 목록 3" />
+    </ListedComponentWrapper>
   );
 };
 

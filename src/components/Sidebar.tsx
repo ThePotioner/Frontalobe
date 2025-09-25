@@ -19,7 +19,7 @@ const Sidebar = () => {
   const location = useLocation();
   return (
     <nav className="flex flex-col min-w-[240px] max-w-[480px] bg-sidebar border">
-      <div className="flex flex-col m-2 gap-2">
+      <div className="flex flex-col flex-1 m-2 gap-2">
         <p className="text-muted-foreground text-sm font-bold pl-2">Menus</p>
         {items.map((item) => (
           <Button

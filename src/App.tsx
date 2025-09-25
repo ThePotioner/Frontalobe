@@ -1,20 +1,19 @@
-import Topbar from './components/Topbar';
-import PageContainer from './components/PageContainer';
-import Sidebar from './components/Sidebar';
-import { ThemeButton } from './components/ThemeButton';
+import Topbar from '@/components/Topbar';
+import PageContainer from '@/components/PageContainer';
+import Sidebar from '@/components/Sidebar';
+import { FullscreenWrapper, ColumnWrapper } from '@/components/ui/Wrappers';
+import { ThemeButton } from '@/components/ThemeButton';
 
 const App = () => {
   return (
-    <div className="flex h-screen">
+    <FullscreenWrapper>
       <Sidebar />
-      <div className="flex flex-col flex-1">
+      <ColumnWrapper>
         <Topbar />
         <PageContainer />
-      </div>
-      <div className="absolute bottom-4 right-4">
-        <ThemeButton />
-      </div>
-    </div>
+      </ColumnWrapper>
+      <ThemeButton />
+    </FullscreenWrapper>
   );
 };
 
